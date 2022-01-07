@@ -12,6 +12,6 @@ export function renderItem(item) {
     itemP.textContent = `${item.item} ${item.quantity}`;
 
     itemDiv.append(itemP);
-    console.log(itemDiv);
+    
     return itemDiv;
 }

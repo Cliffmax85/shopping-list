@@ -52,7 +52,7 @@ async function displayItems() {
 
 }
 
-buyItem.addEventListener
+
 
 logoutButton.addEventListener('click', () => {
     logout();
