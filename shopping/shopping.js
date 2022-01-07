@@ -13,9 +13,9 @@ checkAuth();
 
 const itemFrom = document.querySelector('.shopping-form');
 const deleteButton = document.querySelector('.delete-button');
-const itemsEl = document.querySelector('.items');
+const itemsEl = document.querySelector('.lists');
 
-
+console.log(itemsEl);
 const logoutButton = document.getElementById('logout');
 
 itemFrom.addEventListener('submit', async(e) => {
@@ -35,22 +35,30 @@ itemFrom.addEventListener('submit', async(e) => {
 
 async function displayItems() {
     const list = await getItems();
-    console.log(typeof list);
+    //console.log(typeof list);
 
-    //itemsEl.textContent = '';
+    itemsEl.textContent = '';
 
     for (let item of list) { 
         const itemEl = renderItem(item);
         itemEl.addEventListener('click', async() => {
             await buyItem(item.id);
-            await displayItems();
+            displayItems();
         });
+        itemsEl.append(itemEl);
 
     }
-    itemsEl.append('itemEl');
+    
 
 }
 
+buyItem.addEventListener
+
 logoutButton.addEventListener('click', () => {
     logout();
+});
+
+deleteButton.addEventListener('click', async() => {
+    await deleteAllItems();
+    displayItems();
 });

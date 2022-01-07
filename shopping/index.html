@@ -15,13 +15,22 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="../assets/big-logo.png" />
-            <h3>Shopping List</h3>
+        <div class="gutter-left logout">
+           
+            <button id="logout">Logout</button>
+           
         </div>
+        
+        <div class="gutter-right logo">
+           
+            <h3>Shopping List</h3>
+           
+        </div>
+        
     </header>    
-    <button id="logout">Logout</button>
+    
     <main>
+    
        <form class="shopping-form">
           <label>
                 <input name='item' />
@@ -30,6 +39,7 @@
                 <input type="number" name="quantity" />
             </label>  
             <button>Add Item and Quantity</button>
+            
        </form>
        <button class="delete-button">Delete List?</button>
        <div class="lists">

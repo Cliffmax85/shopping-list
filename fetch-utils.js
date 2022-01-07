@@ -32,7 +32,7 @@ export async function buyItem(id) {
     const response = await client 
         .from('shopping')
         .update({ bought: true })
-        .macth(({ id: id }));
+        .match(({ id: id }));
     return checkError(response);
 }
 

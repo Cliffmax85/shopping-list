@@ -62,6 +62,10 @@ h2 {
     margin-right: 20px;
 }
 
+.gutter-left {
+    display: flex;
+}
+
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
 }
@@ -106,7 +110,7 @@ footer {
   }
 
 #logout {
-    position: fixed;
+    
     right: 20px;
     top: 90px;
 }
@@ -128,4 +132,11 @@ footer {
 
 .auth-container button {
     margin: 10px;
+}
+
+.bought {
+    cursor: crosshair;
+    background-color: magenta;
+    text-size-adjust: 5px;
+    text-decoration: line-through;
 }
