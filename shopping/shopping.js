@@ -52,6 +52,10 @@ async function displayItems() {
 
 }
 
+window.addEventListener('load', async() => {
+    await displayItems();
+});
+
 
 
 logoutButton.addEventListener('click', () => {
